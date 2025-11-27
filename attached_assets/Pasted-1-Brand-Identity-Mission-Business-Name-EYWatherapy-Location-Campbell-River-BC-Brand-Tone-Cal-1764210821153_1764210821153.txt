@@ -1,0 +1,195 @@
+1. Brand Identity & Mission
+
+Business Name: EYWatherapy
+Location: Campbell River, BC
+Brand Tone: Calm, professional, compassionate, nature-inspired, trustworthy
+Tagline Ideas (Choose One):
+
+Restoring Balance. Renewing You.
+
+Rooted in Healing. Focused on You.
+
+Holistic RMT Care on the Campbell River Coast.
+
+Mission Statement:
+EYWatherapy provides compassionate, evidence-based massage therapy focused on restoring balance, reducing pain, and supporting long-term well-being. Our approach blends clinical skill with a warm, welcoming environment that reflects the calm and natural beauty of Vancouver Island.
+
+2. Website Structure (Pages & Key Functions)
+Home Page
+
+Hero section with a calming coastal or forest-inspired image
+
+Tagline + one-sentence summary
+
+Primary CTA: Book an Appointment
+
+Secondary CTA: Explore Our Services
+
+Short “Who We Help” section (pain management, injury recovery, stress relief, relaxation, mobility improvement)
+
+Mini preview of team + service categories
+
+Footer with contact info + quick links
+
+About Page
+
+Story of EYWatherapy: Why the clinic exists and its guiding values
+
+Description of therapeutic philosophy
+
+Practitioner bios including:
+
+headshot
+
+credentials (RMT)
+
+treatment approach/special interests
+
+personal quote or philosophy of care
+
+Emphasis on friendly, approachable, community-rooted care
+
+Services Page
+
+List and describe each service clearly, focusing on benefits and expectations.
+Possible services:
+
+Registered Massage Therapy
+
+Deep Tissue Massage
+
+Relaxation Massage
+
+Injury Recovery & Rehabilitation
+
+Sports & Performance Massage
+
+Pregnancy / Prenatal Massage
+
+Each service description should include:
+
+What the treatment is
+
+Who it benefits
+
+What clients can expect during the session
+
+Booking Page
+
+Online booking integration (Jane App or similar)
+
+Clear instructions for new clients
+
+What to bring / how early to arrive
+
+Direct billing information if offered
+
+Rates & Policies
+
+Treatment durations and pricing (30/45/60/90 minutes)
+
+Cancellation policy
+
+Insurance and direct billing details
+
+Accessibility or mobility information (if applicable)
+
+Contact Page
+
+Clinic address (Campbell River, BC)
+
+Embedded map
+
+Phone + email
+
+Parking / entrance notes
+
+Social media links (optional)
+
+Optional Pages
+
+FAQ: (good for client confidence)
+
+Blog / Wellness Articles: Stretching tips, recovery advice, pain management insights (great for SEO)
+
+3. Visual Style & Design Guidelines
+Aesthetic
+
+Nature-inspired, calm, coastal Vancouver Island tones
+
+Warm, clean, and modern layout
+
+Avoid clinical “hospital white” — opt for comfort-forward design
+
+Colour Palette (Suggested)
+
+Deep forest green
+
+Soft ocean blue
+
+Warm sand/beige neutrals
+
+Gentle white/cream backgrounds
+
+Typography
+
+Headings: modern smooth serif OR clean soft sans-serif
+
+Body text: simple, readable sans-serif
+
+Round, friendly line spacing (not cramped)
+
+Image Style (Original, Not Copied)
+
+Warm natural lighting
+
+Massage therapy scenes with soft-focus atmosphere
+
+Abstract nature textures (wood grain, ocean water, ferns)
+
+Optional lifestyle shots to evoke ease, breathing, grounding
+
+UI/UX Essentials
+
+Clear buttons and easy-to-find booking links
+
+Good mobile responsiveness
+
+Avoid clutter — prioritize calm space and readable content
+
+Soft animations (fade-ins, gentle motion) acceptable but minimal
+
+4. Core Messaging & Voice
+
+Your content should sound:
+
+Supportive
+
+Knowledgeable
+
+Approachable
+
+Real (not overly corporate or generic)
+
+Example tone:
+“Your wellness matters. Whether you're managing pain, recovering from injury, or simply seeking relaxation, we’re here to support you with skilled care and a warm, welcoming space.”
+
+5. Deliverables Desired in the Replit Build
+
+A developer or generator should produce:
+
+A fully responsive website
+
+Custom colour palette & typography
+
+Original, non-stock-looking image prompts (coastal, nature, calming interiors)
+
+Separate pages for each section
+
+Global header + footer
+
+Integrated online booking button
+
+Clean navigation
+
+Smooth scroll + soft animations

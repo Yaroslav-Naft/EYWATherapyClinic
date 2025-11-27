@@ -1,0 +1,146 @@
+import { Link, useLocation } from "wouter";
+import { Menu, X, MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  const [location] = useLocation();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/services", label: "Services" },
+    { href: "/contact", label: "Contact" },
+  ];
+
+  return (
+    <div className="min-h-screen flex flex-col bg-background font-sans text-foreground">
+      {/* Navigation */}
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          scrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"
+        }`}
+      >
+        <div className="container mx-auto px-6 flex items-center justify-between">
+          <Link href="/" className="text-2xl md:text-3xl font-serif font-bold text-primary tracking-wide cursor-pointer">
+            EYWatherapy
+          </Link>
+
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link 
+                key={link.href} 
+                href={link.href}
+                className={`text-sm uppercase tracking-widest hover:text-primary transition-colors ${
+                  location === link.href ? "text-primary font-semibold" : "text-muted-foreground"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Button asChild className="bg-primary hover:bg-primary/90 text-white font-sans tracking-wide rounded-full px-6">
+              <a href="https://jane.app/" target="_blank" rel="noopener noreferrer">Book Online</a>
+            </Button>
+          </nav>
+
+          {/* Mobile Nav */}
+          <div className="md:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="text-primary">
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="bg-[#F9F7F2] border-none flex flex-col justify-center items-center gap-8">
+                {navLinks.map((link) => (
+                  <Link 
+                    key={link.href} 
+                    href={link.href}
+                    className="text-2xl font-serif text-primary hover:text-secondary transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+                <Button asChild className="bg-primary hover:bg-primary/90 text-white font-sans tracking-wide rounded-full px-8 py-6 text-lg mt-4">
+                  <a href="https://jane.app/" target="_blank" rel="noopener noreferrer">Book Online</a>
+                </Button>
+              </SheetContent>
+            </Sheet>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="flex-grow pt-0">
+        {children}
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-primary text-primary-foreground pt-16 pb-8">
+        <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          {/* Brand */}
+          <div className="space-y-4">
+            <h3 className="text-2xl font-serif font-bold text-white">EYWatherapy</h3>
+            <p className="text-primary-foreground/80 leading-relaxed max-w-xs font-light">
+              Restoring Balance. Renewing You.
+              <br />
+              Compassionate, evidence-based massage therapy on the Campbell River Coast.
+            </p>
+          </div>
+
+          {/* Contact */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-serif font-semibold text-white">Contact Us</h4>
+            <div className="space-y-3 text-primary-foreground/80 font-light">
+              <div className="flex items-start gap-3">
+                <MapPin className="h-5 w-5 mt-0.5 shrink-0" />
+                <p>123 Coastal Highway,<br />Campbell River, BC V9W 1A1</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="h-5 w-5 shrink-0" />
+                <p>(250) 555-0123</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <Mail className="h-5 w-5 shrink-0" />
+                <p>hello@eywatherapy.com</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Links & Social */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-serif font-semibold text-white">Connect</h4>
+            <div className="flex gap-4">
+              <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors">
+                <Facebook className="h-5 w-5" />
+              </a>
+            </div>
+            <div className="pt-4">
+              <Button variant="outline" className="border-white/30 text-white hover:bg-white hover:text-primary rounded-full w-full md:w-auto bg-transparent">
+                Book Appointment
+              </Button>
+            </div>
+          </div>
+        </div>
+        
+        <div className="container mx-auto px-6 pt-8 border-t border-white/10 text-center text-sm text-primary-foreground/60 font-light">
+          <p>&copy; {new Date().getFullYear()} EYWatherapy. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  );
+}
