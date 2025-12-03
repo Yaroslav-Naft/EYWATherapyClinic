@@ -4,6 +4,6 @@ import "./index.css";
 import { Router } from "wouter";
 
 createRoot(document.getElementById("root")!).render(
-    <Router base="/EYWATherapyClinic">
+    <Router base="/">
         <App />
     </Router>);
