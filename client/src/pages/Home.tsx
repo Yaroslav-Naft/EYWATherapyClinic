@@ -153,7 +153,7 @@ export default function Home() {
                 
                 <div className="absolute bottom-0 left-0 p-8 w-full">
                   <h3 className="text-2xl font-serif font-medium text-white mb-2">{service.title}</h3>
-                  <p className="text-white/70 font-light mb-4">{service.price}</p>
+                  {/* <p className="text-white/70 font-light mb-4">{service.price}</p> */}
                   <span className="inline-block text-sm text-secondary border-b border-secondary/50 pb-0.5 opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0 duration-300">
                     Learn More
                   </span>

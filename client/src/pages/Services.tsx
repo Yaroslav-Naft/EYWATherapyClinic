@@ -25,13 +25,6 @@ export default function Services() {
       benefits: ["Accelerated healing", "Reduced inflammation", "Restored function"],
       duration: "30 / 45 / 60 Minutes",
       price: "$75 - $130"
-    },
-    {
-      title: "Pregnancy / Prenatal Massage",
-      description: "Therapeutic bodywork that focuses on the special needs of the mother-to-be as her body goes through the dramatic changes of pregnancy.",
-      benefits: ["Reduces swelling", "Relieves back pain", "Promotes sleep"],
-      duration: "60 / 90 Minutes",
-      price: "$110 - $160"
     }
   ];
 
@@ -72,7 +65,7 @@ export default function Services() {
 
               <div className="w-full md:w-64 flex-shrink-0 bg-[#F9F7F2] p-6 rounded-xl border border-primary/5 text-center">
                 <p className="text-sm text-muted-foreground mb-2">Sessions Available</p>
-                <p className="font-serif font-medium text-primary mb-4">{service.duration}</p>
+                {/* <p className="font-serif font-medium text-primary mb-4">{service.duration}</p> */}
                 <div className="w-full h-px bg-primary/10 mb-4"></div>
                 <Button className="w-full bg-primary text-white hover:bg-primary/90 rounded-full">
                   Book Now
@@ -91,7 +84,7 @@ export default function Services() {
              <p className="text-muted-foreground mb-4 leading-relaxed">
                We offer direct billing to most major insurance providers including Pacific Blue Cross, Canada Life, Manulife, and Sun Life. Please bring your insurance card to your first appointment.
              </p>
-             <ul className="space-y-3 text-primary/80 text-sm">
+             {/* <ul className="space-y-3 text-primary/80 text-sm">
                <li className="flex justify-between border-b border-muted pb-2">
                  <span>30 Minute Session</span>
                  <span className="font-semibold">$75</span>
@@ -108,7 +101,7 @@ export default function Services() {
                  <span>90 Minute Session</span>
                  <span className="font-semibold">$160</span>
                </li>
-             </ul>
+             </ul> */}
              <p className="text-xs text-muted-foreground mt-4">* GST included in all prices.</p>
            </div>
 
