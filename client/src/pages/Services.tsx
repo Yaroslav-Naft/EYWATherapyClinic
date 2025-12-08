@@ -1,31 +1,66 @@
 import Layout from "@/components/Layout";
-import { Button } from "@/components/ui/button";
-import { CheckCircle2 } from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {CheckCircle2} from "lucide-react";
 import fernTexture from "@assets/generated_images/fern_leaves_texture_for_background_accent.png";
 
 export default function Services() {
   const services = [
     {
       title: "Registered Massage Therapy",
-      description: "A comprehensive assessment and treatment tailored to your specific needs. This may include a mix of deep tissue, Swedish, and myofascial techniques.",
+      description:
+        "A comprehensive assessment and treatment tailored to your specific needs. This may include a mix of deep tissue, Swedish, and myofascial techniques.",
       benefits: ["Pain relief", "Improved circulation", "Stress reduction"],
-      duration: "30 / 45 / 60 / 90 Minutes",
-      price: "$75 - $160"
+      duration: "60 / 90 Minutes",
+      price: "$75 - $160",
     },
     {
       title: "Deep Tissue Massage",
-      description: "Focused work on deeper layers of muscle and connective tissue. Ideal for chronic aches, contracted areas such as a stiff neck and upper back, low back pain, leg muscle tightness, and sore shoulders.",
-      benefits: ["Breaks down scar tissue", "Relieves chronic tension", "Improves range of motion"],
-      duration: "45 / 60 / 90 Minutes",
-      price: "$95 - $160"
+      description:
+        "Focused work on deeper layers of muscle and connective tissue. Ideal for chronic aches, contracted areas such as a stiff neck and upper back, low back pain, leg muscle tightness, and sore shoulders.",
+      benefits: [
+        "Breaks down scar tissue",
+        "Relieves chronic tension",
+        "Improves range of motion",
+      ],
+      duration: "60 / 90 Minutes",
+      price: "$95 - $160",
     },
     {
-      title: "Injury Recovery & Rehab",
-      description: "Targeted treatment for sports injuries, motor vehicle accidents, or workplace injuries. We work with you to create a plan for safe return to activity.",
-      benefits: ["Accelerated healing", "Reduced inflammation", "Restored function"],
-      duration: "30 / 45 / 60 Minutes",
-      price: "$75 - $130"
-    }
+      title: "Cranial therapy",
+      description:
+        "Gentle manipulation of the cranial bones and membranes to restore proper alignment and fluid movement. Effective for headaches, migraines, TMJ disorders, and stress-related tension.",
+      benefits: [
+        "Relief from headaches and migraines",
+        "Improved sleep quality",
+        "Reduced stress and tension",
+      ],
+      duration: "60 Minutes",
+      price: "$75 - $130",
+    },
+    {
+      title: "Neuro relaxation therapy",
+      description:
+        "Specialized therapy that calms the nervous system and releases deep-seated tension. Combines gentle techniques to restore balance and promote deep relaxation throughout the body.",
+      benefits: [
+        "Reduced anxiety and stress",
+        "Enhanced mental clarity",
+        "Improved nervous system regulation",
+      ],
+      duration: "60 Minutes",
+      price: "$75 - $130",
+    },
+    {
+      title: "Cranio mandibular alignment therapy",
+      description:
+        "Focused treatment for jaw alignment and TMJ dysfunction. Addresses jaw pain, clicking, grinding, and tension through specialized manual techniques to restore proper jaw mechanics.",
+      benefits: [
+        "Relief from jaw pain and TMJ symptoms",
+        "Improved jaw mobility",
+        "Reduced tension headaches",
+      ],
+      duration: "60 Minutes",
+      price: "$75 - $130",
+    },
   ];
 
   return (
@@ -33,9 +68,12 @@ export default function Services() {
       {/* Header */}
       <div className="bg-secondary/20 py-20">
         <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-serif text-primary mb-6">Our Services</h1>
+          <h1 className="text-4xl md:text-5xl font-serif text-primary mb-6">
+            Our Services
+          </h1>
           <p className="text-xl font-light text-muted-foreground max-w-2xl mx-auto">
-            Evidence-based treatments designed to restore your body's natural balance.
+            Evidence-based treatments designed to restore your body's natural
+            balance.
           </p>
         </div>
       </div>
@@ -44,19 +82,30 @@ export default function Services() {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6 max-w-5xl space-y-12">
           {services.map((service, idx) => (
-            <div key={idx} className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-muted flex flex-col md:flex-row gap-8 items-start group hover:border-secondary/50 transition-colors">
+            <div
+              key={idx}
+              className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-muted flex flex-col md:flex-row gap-8 items-start group hover:border-secondary/50 transition-colors"
+            >
               <div className="flex-1">
-                <h3 className="text-2xl font-serif font-bold text-primary mb-3">{service.title}</h3>
+                <h3 className="text-2xl font-serif font-bold text-primary mb-3">
+                  {service.title}
+                </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   {service.description}
                 </p>
-                
+
                 <div className="space-y-2 mb-6">
-                  <span className="text-xs font-bold text-secondary uppercase tracking-wider">Key Benefits</span>
+                  <span className="text-xs font-bold text-secondary uppercase tracking-wider">
+                    Key Benefits
+                  </span>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {service.benefits.map((benefit, bIdx) => (
-                      <li key={bIdx} className="flex items-center gap-2 text-sm text-primary/80">
-                        <CheckCircle2 className="w-4 h-4 text-secondary" /> {benefit}
+                      <li
+                        key={bIdx}
+                        className="flex items-center gap-2 text-sm text-primary/80"
+                      >
+                        <CheckCircle2 className="w-4 h-4 text-secondary" />{" "}
+                        {benefit}
                       </li>
                     ))}
                   </ul>
@@ -64,11 +113,17 @@ export default function Services() {
               </div>
 
               <div className="w-full md:w-64 flex-shrink-0 bg-[#F9F7F2] p-6 rounded-xl border border-primary/5 text-center">
-                <p className="text-sm text-muted-foreground mb-2">Sessions Available</p>
-                {/* <p className="font-serif font-medium text-primary mb-4">{service.duration}</p> */}
+                <p className="text-sm text-muted-foreground mb-2">
+                  Sessions Available
+                </p>
+                <p className="font-serif font-medium text-primary mb-4">
+                  {service.duration}
+                </p>
                 <div className="w-full h-px bg-primary/10 mb-4"></div>
-                <Button className="w-full bg-primary text-white hover:bg-primary/90 rounded-full">
-                  Book Now
+                <Button asChild className="w-full bg-primary text-white hover:bg-primary/90 rounded-full">
+                  <a href="https://eywamassage.janeapp.com/" target="_blank" rel="noopener noreferrer">
+                    Book Now
+                  </a>
                 </Button>
               </div>
             </div>
@@ -79,12 +134,16 @@ export default function Services() {
       {/* Rates & Policies */}
       <section className="py-20 bg-white border-t border-muted">
         <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
-           <div>
-             <h3 className="text-2xl font-serif text-primary mb-6">Rates & Direct Billing</h3>
-             <p className="text-muted-foreground mb-4 leading-relaxed">
-               We offer direct billing to most major insurance providers including Pacific Blue Cross, Canada Life, Manulife, and Sun Life. Please bring your insurance card to your first appointment.
-             </p>
-             {/* <ul className="space-y-3 text-primary/80 text-sm">
+          <div>
+            <h3 className="text-2xl font-serif text-primary mb-6">
+              Rates & Direct Billing
+            </h3>
+            <p className="text-muted-foreground mb-4 leading-relaxed">
+              We offer direct billing to most major insurance providers
+              including Pacific Blue Cross, Canada Life, Manulife, and Sun Life.
+              Please bring your insurance card to your first appointment.
+            </p>
+            {/* <ul className="space-y-3 text-primary/80 text-sm">
                <li className="flex justify-between border-b border-muted pb-2">
                  <span>30 Minute Session</span>
                  <span className="font-semibold">$75</span>
@@ -102,20 +161,29 @@ export default function Services() {
                  <span className="font-semibold">$160</span>
                </li>
              </ul> */}
-             <p className="text-xs text-muted-foreground mt-4">* GST included in all prices.</p>
-           </div>
+            <p className="text-xs text-muted-foreground mt-4">
+              * GST included in all prices.
+            </p>
+          </div>
 
-           <div>
-             <h3 className="text-2xl font-serif text-primary mb-6">Cancellation Policy</h3>
-             <div className="bg-red-50 p-6 rounded-xl border border-red-100">
-               <p className="text-red-800/80 leading-relaxed text-sm">
-                 Your appointment time is reserved just for you. A late cancellation or missed visit leaves a hole in the therapists' day that could have been filled by another patient.
-               </p>
-               <p className="text-red-800/80 leading-relaxed text-sm mt-4 font-medium">
-                 We require 24 hours notice for any cancellations or changes to your appointment. Patients who provide less than 24 hours notice, or miss their appointment, will be charged a cancellation fee.
-               </p>
-             </div>
-           </div>
+          <div>
+            <h3 className="text-2xl font-serif text-primary mb-6">
+              Cancellation Policy
+            </h3>
+            <div className="bg-red-50 p-6 rounded-xl border border-red-100">
+              <p className="text-red-800/80 leading-relaxed text-sm">
+                Your appointment time is reserved just for you. A late
+                cancellation or missed visit leaves a hole in the therapists'
+                day that could have been filled by another patient.
+              </p>
+              <p className="text-red-800/80 leading-relaxed text-sm mt-4 font-medium">
+                We require 24 hours notice for any cancellations or changes to
+                your appointment. Patients who provide less than 24 hours
+                notice, or miss their appointment, will be charged a
+                cancellation fee.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </Layout>

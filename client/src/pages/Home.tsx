@@ -38,15 +38,17 @@ export default function Home() {
             className="space-y-6 max-w-4xl mx-auto"
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium tracking-tight leading-tight drop-shadow-lg">
-              Restoring Balance. <br className="hidden md:block" />
-              <span className="italic text-secondary">Renewing You.</span>
+               Holistic Healing <br className="hidden md:block" />
+              <span className="italic text-secondary">for Modern Living</span>
             </h1>
             <p className="text-lg md:text-xl font-light max-w-2xl mx-auto text-white/90 drop-shadow-md">
               Holistic Registered Massage Therapy rooted in the natural calm of the Campbell River coast.
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center pt-8">
-              <Button size="lg" className="bg-[#F9F7F2] text-primary hover:bg-white rounded-full px-8 py-6 text-lg shadow-xl transition-all hover:scale-105">
-                Book an Appointment
+              <Button asChild size="lg" className="bg-[#F9F7F2] text-primary hover:bg-white rounded-full px-8 py-6 text-lg shadow-xl transition-all hover:scale-105">
+                <a href="https://eywamassage.janeapp.com/" target="_blank" rel="noopener noreferrer">
+                  Book an Appointment
+                </a>
               </Button>
               <Link href="/services">
                 <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/20 rounded-full px-8 py-6 text-lg backdrop-blur-sm transition-all bg-transparent">
@@ -72,12 +74,12 @@ export default function Home() {
             variants={fadeIn}
             className="space-y-6"
           >
-            <span className="text-sm uppercase tracking-[0.2em] text-primary/60 font-semibold">Welcome to EYWatherapy</span>
+            <span className="text-sm uppercase tracking-[0.2em] text-primary/60 font-semibold">Welcome to EYWA Therapy</span>
             <h2 className="text-3xl md:text-4xl font-serif text-primary">
               Rooted in Healing. Focused on You.
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We provide compassionate, evidence-based massage therapy focused on restoring balance, reducing pain, and supporting long-term well-being. Our approach blends clinical skill with a warm, welcoming environment that reflects the calm and natural beauty of Vancouver Island.
+              Eywa Therapy was created to provide massage care that blends clinical precision with a calm, attentive experience. Our focus is on treatments that restore function, reduce tension, and support lasting well-being.
             </p>
             <div className="pt-4">
                <Link 
@@ -171,10 +173,12 @@ export default function Home() {
              <Activity className="w-8 h-8 text-secondary mx-auto opacity-50" />
           </div>
           <blockquote className="text-2xl md:text-3xl font-serif text-primary italic leading-relaxed mb-10">
-            "Your wellness matters. Whether you're managing pain, recovering from injury, or simply seeking relaxation, we’re here to support you."
+            "Your wellness matters. Whether you're managing pain, recovering from injury, or simply seeking relaxation, we're here to support you."
           </blockquote>
-          <Button size="lg" className="bg-primary text-white rounded-full px-10 py-6 text-lg shadow-lg hover:bg-primary/90">
-            Book Your Session
+          <Button asChild size="lg" className="bg-primary text-white rounded-full px-10 py-6 text-lg shadow-lg hover:bg-primary/90">
+            <a href="https://eywamassage.janeapp.com/" target="_blank" rel="noopener noreferrer">
+              Book Your Session
+            </a>
           </Button>
         </div>
       </section>

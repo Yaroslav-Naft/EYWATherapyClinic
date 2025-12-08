@@ -25,12 +25,13 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-serif font-bold text-primary text-lg">Visit Us</h3>
-                  <p className="text-muted-foreground">123 Coastal Highway<br />Campbell River, BC V9W 1A1</p>
+                  <p className="text-muted-foreground">2-522 S Dogwood street<br />Campbell River, BC V9W 6Y7</p>
                   <a href="#" className="text-sm text-secondary font-medium hover:underline mt-1 block">Get Directions</a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
+              {/* Todo: re-add phone once provided */}
+              {/* <div className="flex items-start gap-4">
                 <div className="bg-secondary/20 p-3 rounded-full text-primary">
                   <Phone className="w-6 h-6" />
                 </div>
@@ -39,7 +40,7 @@ export default function Contact() {
                   <p className="text-muted-foreground">(250) 555-0123</p>
                   <p className="text-xs text-muted-foreground mt-1">Mon-Fri, 9am - 5pm</p>
                 </div>
-              </div>
+              </div> */}
 
               <div className="flex items-start gap-4">
                 <div className="bg-secondary/20 p-3 rounded-full text-primary">
@@ -47,7 +48,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-serif font-bold text-primary text-lg">Email Us</h3>
-                  <p className="text-muted-foreground">hello@eywatherapy.com</p>
+                  <p className="text-muted-foreground">eywatherapy@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -78,7 +79,7 @@ export default function Contact() {
              <div className="bg-white/90 backdrop-blur-md p-8 rounded-xl shadow-xl text-center max-w-xs mx-4">
                <MapPin className="w-10 h-10 text-primary mx-auto mb-4" />
                <h3 className="font-serif font-bold text-xl text-primary mb-2">Find Us Here</h3>
-               <p className="text-sm text-muted-foreground mb-4">Interactive map would load here in production.</p>
+               {/* <p className="text-sm text-muted-foreground mb-4">Interactive map would load here in production.</p> */}
                <Button variant="outline" className="w-full">Open in Maps</Button>
              </div>
            </div>

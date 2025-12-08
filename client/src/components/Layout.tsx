@@ -3,6 +3,7 @@ import { Menu, X, MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react"
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import logo from "@assets/generated_images/logo.png";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
@@ -32,8 +33,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         }`}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
-          <Link href="/" className="text-2xl md:text-3xl font-serif font-bold text-primary tracking-wide cursor-pointer">
-            EYWatherapy
+          <Link href="/" className="flex items-center gap-3 cursor-pointer group">
+            <img src={logo} alt="EYWA Therapy Logo" className="h-10 md:h-12 w-auto transition-transform group-hover:scale-105" />
+            <span className="text-2xl md:text-3xl font-serif font-bold text-primary tracking-wide">
+              EYWA Therapy
+            </span>
           </Link>
 
           {/* Desktop Nav */}
@@ -50,7 +54,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </Link>
             ))}
             <Button asChild className="bg-primary hover:bg-primary/90 text-white font-sans tracking-wide rounded-full px-6">
-              <a href="https://jane.app/" target="_blank" rel="noopener noreferrer">Book Online</a>
+              <a href="https://eywamassage.janeapp.com/" target="_blank" rel="noopener noreferrer">Book Online</a>
             </Button>
           </nav>
 
@@ -73,7 +77,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   </Link>
                 ))}
                 <Button asChild className="bg-primary hover:bg-primary/90 text-white font-sans tracking-wide rounded-full px-8 py-6 text-lg mt-4">
-                  <a href="https://jane.app/" target="_blank" rel="noopener noreferrer">Book Online</a>
+                  <a href="https://eywamassage.janeapp.com/" target="_blank" rel="noopener noreferrer">Book Online</a>
                 </Button>
               </SheetContent>
             </Sheet>
@@ -91,9 +95,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-serif font-bold text-white">EYWatherapy</h3>
+            <h3 className="text-2xl font-serif font-bold text-white">EYWA Therapy</h3>
             <p className="text-primary-foreground/80 leading-relaxed max-w-xs font-light">
-              Restoring Balance. Renewing You.
+               Holistic Healing for Modern Living
               <br />
               Compassionate, evidence-based massage therapy on the Campbell River Coast.
             </p>
@@ -105,15 +109,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="space-y-3 text-primary-foreground/80 font-light">
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 mt-0.5 shrink-0" />
-                <p>123 Coastal Highway,<br />Campbell River, BC V9W 1A1</p>
+                <p>Unit 2 – 522 South Dogwood Street<br />Campbell River, BC V9W 6Y7</p>
               </div>
-              <div className="flex items-center gap-3">
+              {/* TODO: update phone when received */}
+              {/* <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 shrink-0" />
                 <p>(250) 555-0123</p>
-              </div>
+              </div> */}
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 shrink-0" />
-                <p>hello@eywatherapy.com</p>
+                <p>eywatherapy@gmail.com</p>
               </div>
             </div>
           </div>
@@ -130,15 +135,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </a>
             </div>
             <div className="pt-4">
-              <Button variant="outline" className="border-white/30 text-white hover:bg-white hover:text-primary rounded-full w-full md:w-auto bg-transparent">
-                Book Appointment
+              <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white hover:text-primary rounded-full w-full md:w-auto bg-transparent">
+                <a href="https://eywamassage.janeapp.com/" target="_blank" rel="noopener noreferrer">
+                  Book Appointment
+                </a>
               </Button>
             </div>
           </div>
         </div>
         
         <div className="container mx-auto px-6 pt-8 border-t border-white/10 text-center text-sm text-primary-foreground/60 font-light">
-          <p>&copy; {new Date().getFullYear()} EYWatherapy. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} EYWA Therapy. All rights reserved.</p>
         </div>
       </footer>
     </div>
