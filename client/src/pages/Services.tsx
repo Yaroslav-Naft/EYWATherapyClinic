@@ -10,7 +10,7 @@ export default function Services() {
       description:
         "A comprehensive assessment and treatment tailored to your specific needs. This may include a mix of deep tissue, Swedish, and myofascial techniques.",
       benefits: ["Pain relief", "Improved circulation", "Stress reduction"],
-      duration: "60 / 90 Minutes",
+      duration: "60 Minutes",
       price: "$75 - $160",
     },
     {
@@ -22,7 +22,7 @@ export default function Services() {
         "Relieves chronic tension",
         "Improves range of motion",
       ],
-      duration: "60 / 90 Minutes",
+      duration: "60 Minutes",
       price: "$95 - $160",
     },
     {
