@@ -33,14 +33,10 @@ export default function About() {
               className="space-y-6"
             >
               <h2 className="text-3xl font-serif text-primary">
-                Why EYWA Therapy Exists
+                Why EYWA Massage Therapy Exists
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                {/* EYWA Therapy was founded on a simple belief: that true healing
-                happens when clinical expertise meets genuine compassion.
-                Located in the heart of Campbell River, we draw inspiration from
-                the natural balance of our coastal environment. */}
-                Eywa Therapy was created to provide massage care that blends
+                Eywa Massage Therapy was created to provide massage care that blends
                 clinical precision with a calm, attentive experience. Our focus
                 is on treatments that restore function, reduce tension, and
                 support lasting well-being.

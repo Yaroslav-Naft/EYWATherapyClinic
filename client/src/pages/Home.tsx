@@ -74,12 +74,12 @@ export default function Home() {
             variants={fadeIn}
             className="space-y-6"
           >
-            <span className="text-sm uppercase tracking-[0.2em] text-primary/60 font-semibold">Welcome to EYWA Therapy</span>
+            <span className="text-sm uppercase tracking-[0.2em] text-primary/60 font-semibold">Welcome to EYWA Massage Therapy</span>
             <h2 className="text-3xl md:text-4xl font-serif text-primary">
               Rooted in Healing. Focused on You.
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Eywa Therapy was created to provide massage care that blends clinical precision with a calm, attentive experience. Our focus is on treatments that restore function, reduce tension, and support lasting well-being.
+              Eywa Massage Therapy was created to provide massage care that blends clinical precision with a calm, attentive experience. Our focus is on treatments that restore function, reduce tension, and support lasting well-being.
             </p>
             <div className="pt-4">
                <Link 

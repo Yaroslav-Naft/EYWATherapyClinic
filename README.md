@@ -1,1 +1,1 @@
-# EYWA Therapy Clinic
+# EYWA Massage Therapy Clinic
