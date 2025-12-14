@@ -16,11 +16,13 @@ export default function Services() {
     {
       title: "Deep Tissue Massage",
       description:
-        "Focused work on deeper layers of muscle and connective tissue. Ideal for chronic aches, contracted areas such as a stiff neck and upper back, low back pain, leg muscle tightness, and sore shoulders.",
+        "Focused therapeutic work targeting deeper layers of muscle and connective tissue. Ideal for chronic aches, postural tension, and long-standing restrictions that do not respond to lighter pressure.",
       benefits: [
-        "Breaks down scar tissue",
-        "Relieves chronic tension",
+        "Breaks down scar tissue and adhesions",
         "Improves range of motion",
+        "Relieves chronic muscle tension",
+        "Reduces deep-rooted stiffness",
+        "Enhances long-term mobility",
       ],
       duration: "60 Minutes",
       price: "$95 - $160",
@@ -45,6 +47,48 @@ export default function Services() {
         "Reduced anxiety and stress",
         "Enhanced mental clarity",
         "Improved nervous system regulation",
+      ],
+      duration: "60 Minutes",
+      price: "$75 - $130",
+    },
+    {
+      title: "Passive stretch therapy",
+      description:
+        "Therapist-guided stretching that requires no active effort from you. This approach safely lengthens muscles and fascia, improves joint mechanics, and supports better posture and performance.",
+      benefits: [
+        "Increases flexibility safely and effectively",
+        "Reduces joint and muscle stiffness",
+        "Enhances posture and alignment",
+        "Improves athletic performance and recovery",
+        "Supports long-term mobility and body awareness",
+      ],
+      duration: "60 Minutes",
+      price: "$75 - $130",
+    },
+    {
+      title: "Hydrotherapy – Hot & Cold Stone Treatment",
+      description:
+        "A therapeutic blend of heated and cooled stones applied in flowing, rhythmic patterns. The contrast of temperature soothes the nervous system, melts tension, and stimulates circulation for a deeply restorative experience.",
+      benefits: [
+        "Deep muscular relaxation",
+        "Boosts circulation and lymphatic flow",
+        "Calms the nervous system",
+        "Reduces tension and stress",
+        "Enhances overall rejuvenation and recovery",
+      ],
+      duration: "60 Minutes",
+      price: "$75 - $130",
+    },
+    {
+      title: "Trigger Point Therapy",
+      description:
+        "Precise release of hyper-irritable points within the muscle that cause local or referred pain. Especially helpful for headaches, neck and shoulder tension, and repetitive-strain patterns.",
+      benefits: [
+        "Releases muscle knots",
+        "Reduces referred and localized pain",
+        "Improves flexibility and ease of movement",
+        "Restores healthy muscle function",
+        "Decreases headaches and tension patterns",
       ],
       duration: "60 Minutes",
       price: "$75 - $130",
