@@ -49,18 +49,6 @@ export default function Services() {
       duration: "60 Minutes",
       price: "$75 - $130",
     },
-    {
-      title: "Cranio mandibular alignment therapy",
-      description:
-        "Focused treatment for jaw alignment and TMJ dysfunction. Addresses jaw pain, clicking, grinding, and tension through specialized manual techniques to restore proper jaw mechanics.",
-      benefits: [
-        "Relief from jaw pain and TMJ symptoms",
-        "Improved jaw mobility",
-        "Reduced tension headaches",
-      ],
-      duration: "60 Minutes",
-      price: "$75 - $130",
-    },
   ];
 
   return (
@@ -116,18 +104,29 @@ export default function Services() {
                 <p className="text-sm text-muted-foreground mb-2">
                   Sessions Available
                 </p>
-                <p className="font-serif font-medium text-primary mb-4">
+                <p className="font-serif font-medium text-primary">
                   {service.duration}
                 </p>
-                <div className="w-full h-px bg-primary/10 mb-4"></div>
-                <Button asChild className="w-full bg-primary text-white hover:bg-primary/90 rounded-full">
-                  <a href="https://eywamassage.janeapp.com/" target="_blank" rel="noopener noreferrer">
-                    Book Now
-                  </a>
-                </Button>
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Book Appointment Section */}
+      <section className="py-16 bg-secondary/10">
+        <div className="container mx-auto px-6 max-w-3xl text-center">
+          <h2 className="text-3xl md:text-4xl font-serif text-primary mb-4">
+            Ready to Book Your Appointment?
+          </h2>
+          <p className="text-muted-foreground mb-8 leading-relaxed">
+            {/* Take the first step towards wellness. Book your session today and experience personalized care. */}
+          </p>
+          <Button asChild className="bg-primary text-white hover:bg-primary/90 rounded-full px-12 py-6 text-lg">
+            <a href="https://eywamassage.janeapp.com/" target="_blank" rel="noopener noreferrer">
+              Book Now
+            </a>
+          </Button>
         </div>
       </section>
 
