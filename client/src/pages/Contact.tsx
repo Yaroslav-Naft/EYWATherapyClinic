@@ -87,7 +87,6 @@ export default function Contact() {
 
         {/* Map / Image Section */}
         <div className="w-full md:w-1/2 bg-muted relative min-h-[400px]">
-          {/* In a real app, this would be a Google Map iframe */}
           <img
             src={driftwoodTexture}
             className="w-full h-full object-cover opacity-80"
@@ -101,7 +100,7 @@ export default function Contact() {
               </h3>
               {/* <p className="text-sm text-muted-foreground mb-4">Interactive map would load here in production.</p> */}
               <Button variant="outline" className="w-full">
-                Open in Maps
+              <a href="https://maps.app.goo.gl/iwGJr3Uz6X1fx9Xa9" target="_blank" rel="noopener noreferrer">Open in Maps</a>
               </Button>
             </div>
           </div>

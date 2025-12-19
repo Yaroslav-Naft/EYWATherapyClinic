@@ -28,7 +28,7 @@ export default function Services() {
       price: "$95 - $160",
     },
     {
-      title: "Cranial therapy",
+      title: "Cranial Therapy",
       description:
         "Gentle manipulation of the cranial bones and membranes to restore proper alignment and fluid movement. Effective for headaches, migraines, TMJ disorders, and stress-related tension.",
       benefits: [
@@ -98,14 +98,16 @@ export default function Services() {
   return (
     <Layout>
       {/* Header */}
-      <div className="bg-secondary/20 py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-serif text-primary mb-6">
+      <div className="bg-secondary/20 pt-20 pb-5">
+        <div className="container mx-auto px-6 pt-6 text-center">
+          <h1 className="text-4xl md:text-5xl font-serif text-primary mb-2">
             Our Services
           </h1>
           <p className="text-xl font-light text-muted-foreground max-w-2xl mx-auto">
-            Evidence-based treatments designed to restore your body's natural
-            balance.
+            At Eywa Massage Therapy, we offer evidence-based, holistic massage therapy
+            designed to calm the nervous system, reduce pain, and support
+            long-term well-being. Each session is tailored to your unique needs
+            and goals.
           </p>
         </div>
       </div>
@@ -166,8 +168,15 @@ export default function Services() {
           <p className="text-muted-foreground mb-8 leading-relaxed">
             {/* Take the first step towards wellness. Book your session today and experience personalized care. */}
           </p>
-          <Button asChild className="bg-primary text-white hover:bg-primary/90 rounded-full px-12 py-6 text-lg">
-            <a href="https://eywamassage.janeapp.com/" target="_blank" rel="noopener noreferrer">
+          <Button
+            asChild
+            className="bg-primary text-white hover:bg-primary/90 rounded-full px-12 py-6 text-lg"
+          >
+            <a
+              href="https://eywamassage.janeapp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Book Now
             </a>
           </Button>
@@ -215,15 +224,14 @@ export default function Services() {
             </h3>
             <div className="bg-red-50 p-6 rounded-xl border border-red-100">
               <p className="text-red-800/80 leading-relaxed text-sm">
-                Your appointment time is reserved just for you. A late
-                cancellation or missed visit leaves a hole in the therapists'
-                day that could have been filled by another patient.
+                Your appointment time is reserved exclusively for you. A late
+                cancellation or missed visit leaves a gap that could have been
+                offered to another patient.
               </p>
               <p className="text-red-800/80 leading-relaxed text-sm mt-4 font-medium">
-                We require 24 hours notice for any cancellations or changes to
-                your appointment. Patients who provide less than 24 hours
-                notice, or miss their appointment, will be charged a
-                cancellation fee.
+                We require 24 hours’ notice for any cancellations or appointment
+                changes. Appointments cancelled with less than 24 hours’ notice,
+                or missed entirely, are subject to a cancellation fee.
               </p>
             </div>
           </div>

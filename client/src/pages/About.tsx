@@ -33,7 +33,7 @@ export default function About() {
               className="space-y-6"
             >
               <h2 className="text-3xl font-serif text-primary">
-                Why EYWA Massage Therapy Exists
+                Our Story
               </h2>
               <p className="text-muted-foreground leading-relaxed">
                 Eywa Massage Therapy was created to provide massage care that blends

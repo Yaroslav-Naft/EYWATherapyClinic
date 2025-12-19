@@ -34,9 +34,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 cursor-pointer group">
-            <img src={logo} alt="EYWA Massage Therapy Logo" className="h-10 md:h-12 w-auto transition-transform group-hover:scale-105" />
+            <img src={logo} alt="Eywa Massage Therapy Logo" className="h-10 md:h-12 w-auto transition-transform group-hover:scale-105" />
             <span className="text-2xl md:text-3xl font-serif font-bold text-primary tracking-wide">
-              EYWA Massage Therapy
+              Eywa Massage Therapy
             </span>
           </Link>
 
@@ -95,7 +95,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-serif font-bold text-white">EYWA Massage Therapy</h3>
+            <h3 className="text-2xl font-serif font-bold text-white">Eywa Massage Therapy</h3>
             <p className="text-primary-foreground/80 leading-relaxed max-w-xs font-light">
                Holistic Healing for Modern Living
               <br />
@@ -145,7 +145,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </div>
         
         <div className="container mx-auto px-6 pt-8 border-t border-white/10 text-center text-sm text-primary-foreground/60 font-light">
-          <p>&copy; {new Date().getFullYear()} EYWA Massage Therapy. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Eywa Massage Therapy. All rights reserved.</p>
         </div>
       </footer>
     </div>

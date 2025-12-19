@@ -74,7 +74,7 @@ export default function Home() {
             variants={fadeIn}
             className="space-y-6"
           >
-            <span className="text-sm uppercase tracking-[0.2em] text-primary/60 font-semibold">Welcome to EYWA Massage Therapy</span>
+            <span className="text-sm uppercase tracking-[0.2em] text-primary/60 font-semibold">Welcome to Eywa Massage Therapy</span>
             <h2 className="text-3xl md:text-4xl font-serif text-primary">
               Rooted in Healing. Focused on You.
             </h2>
@@ -143,7 +143,7 @@ export default function Home() {
             {[
               { title: "Registered Massage Therapy", price: "From $110" },
               { title: "Deep Tissue Massage", price: "From $120" },
-              { title: "Prenatal Massage", price: "From $110" },
+              { title: "Cranial Therapy", price: "From $110" },
             ].map((service, idx) => (
               <div key={idx} className="group relative overflow-hidden rounded-xl aspect-[4/5] md:aspect-[3/4] bg-black/20 cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90" />
