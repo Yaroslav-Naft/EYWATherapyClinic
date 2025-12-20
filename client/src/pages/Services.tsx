@@ -112,9 +112,9 @@ export default function Services() {
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-muted flex flex-col md:flex-row gap-8 items-start group hover:border-secondary/50 transition-colors"
+              className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-muted flex flex-col gap-8 items-center group hover:border-secondary/50 transition-colors"
             >
-              <div className="flex-1">
+              <div className="flex-1 text-center">
                 <h3 className="text-2xl font-serif font-bold text-primary mb-3">
                   {service.title}
                 </h3>
@@ -122,18 +122,18 @@ export default function Services() {
                   {service.description}
                 </p>
 
-                <div className="space-y-2 mb-6">
-                  <span className="text-xs font-bold text-secondary uppercase tracking-wider">
+                <div className="mt-6 mb-6 flex flex-col items-center">
+                  <span className="text-xs font-bold text-secondary uppercase tracking-wider mb-4">
                     Key Benefits
                   </span>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <ul className={`${service.benefits.length <= 3 ? 'space-y-3 max-w-md' : 'grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3 max-w-3xl'}`}>
                     {service.benefits.map((benefit, bIdx) => (
                       <li
                         key={bIdx}
-                        className="flex items-center gap-2 text-sm text-primary/80"
+                        className="flex items-start gap-3 text-sm text-primary/80 text-left"
                       >
-                        <CheckCircle2 className="w-4 h-4 text-secondary" />{" "}
-                        {benefit}
+                        <CheckCircle2 className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                        <span className="flex-1 leading-relaxed">{benefit}</span>
                       </li>
                     ))}
                   </ul>
