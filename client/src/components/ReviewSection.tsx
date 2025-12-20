@@ -22,7 +22,7 @@ export function ReviewSection() {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-serif text-primary text-center mb-16"
         >
-          What our customers say
+          What our Customers Say
         </motion.h2>
 
         <motion.div
