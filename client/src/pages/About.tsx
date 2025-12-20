@@ -12,7 +12,7 @@ export default function About() {
         <div className="absolute inset-0 opacity-10 mix-blend-overlay">
           <img src={waterTexture} className="w-full h-full object-cover" />
         </div>
-        <div className="container mx-auto px-6 relative z-10 text-center">
+        <div className="container mx-auto pt-10 mb-2 px-6 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl font-serif mb-6">
             Our Story & Philosophy
           </h1>
@@ -22,64 +22,8 @@ export default function About() {
         </div>
       </div>
 
-      {/* Main Content */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{opacity: 0, x: -20}}
-              whileInView={{opacity: 1, x: 0}}
-              viewport={{once: true}}
-              className="space-y-6"
-            >
-              <h2 className="text-3xl font-serif text-primary">
-                Our Story
-              </h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Eywa Massage Therapy was created to provide massage care that blends
-                clinical precision with a calm, attentive experience. Our focus
-                is on treatments that restore function, reduce tension, and
-                support lasting well-being.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                We understand that pain—whether physical or
-                stress-related—interrupts life. Our mission is to help you
-                reclaim that balance through evidence-based massage therapy that
-                feels as restorative as it is effective.
-              </p>
-              <div className="p-6 bg-white border-l-4 border-secondary rounded-r-lg shadow-sm">
-                <p className="text-primary font-medium italic">
-                  "We don't just treat symptoms; we treat the person. Every
-                  session is an opportunity to listen to your body and provide
-                  the specific care it needs."
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{opacity: 0, scale: 0.95}}
-              whileInView={{opacity: 1, scale: 1}}
-              viewport={{once: true}}
-              className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl"
-            >
-              {/* Placeholder for practitioner or clinic interior */}
-              <img
-                src={waterTexture}
-                alt="Calming clinic atmosphere"
-                className="w-full h-full object-cover grayscale-[20%] contrast-[0.9]"
-              />
-              <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/70 to-transparent text-white">
-                <p className="font-serif text-lg">
-                  A space designed for healing.
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* Practitioner Section */}
-      <section className="py-20 bg-white">
+      <section className="pt-10 pb-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-serif text-primary mb-4">
@@ -116,14 +60,6 @@ export default function About() {
                   helping each person feel more aligned and supported in their
                   everyday life.
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="text-xs bg-white px-3 py-1 rounded-full border border-primary/10 text-primary/80">
-                    Deep Tissue
-                  </span>
-                  <span className="text-xs bg-white px-3 py-1 rounded-full border border-primary/10 text-primary/80">
-                    Myofascial Release
-                  </span>
-                </div>
               </div>
             </div>
 
@@ -152,16 +88,62 @@ export default function About() {
                   understand their body and feel more grounded and supported in
                   daily life.
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="text-xs bg-white px-3 py-1 rounded-full border border-primary/10 text-primary/80">
-                    Relaxation
-                  </span>
-                  <span className="text-xs bg-white px-3 py-1 rounded-full border border-primary/10 text-primary/80">
-                    Sports Massage
-                  </span>
-                </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{opacity: 0, x: -20}}
+              whileInView={{opacity: 1, x: 0}}
+              viewport={{once: true}}
+              className="space-y-6"
+            >
+              <h2 className="text-3xl font-serif text-primary">Our Story</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Eywa Massage Therapy was created to provide massage care that
+                blends clinical precision with a calm, attentive experience. Our
+                focus is on treatments that restore function, reduce tension,
+                and support lasting well-being.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                We understand that pain—whether physical or
+                stress-related—interrupts life. Our mission is to help you
+                reclaim that balance through evidence-based massage therapy that
+                feels as restorative as it is effective.
+              </p>
+              <div className="p-6 bg-white border-l-4 border-secondary rounded-r-lg shadow-sm">
+                <p className="text-primary font-medium italic">
+                  "We don't just treat symptoms; we treat the person. Every
+                  session is an opportunity to listen to your body and provide
+                  the specific care it needs."
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{opacity: 0, scale: 0.95}}
+              whileInView={{opacity: 1, scale: 1}}
+              viewport={{once: true}}
+              className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl"
+            >
+              {/* Placeholder for practitioner or clinic interior */}
+              <img
+                src={waterTexture}
+                alt="Calming clinic atmosphere"
+                className="w-full h-full object-cover grayscale-[20%] contrast-[0.9]"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/70 to-transparent text-white">
+                <p className="font-serif text-lg">
+                  A space designed for healing.
+                </p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

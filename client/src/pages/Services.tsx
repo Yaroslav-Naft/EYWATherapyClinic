@@ -6,14 +6,6 @@ import fernTexture from "@assets/generated_images/fern_leaves_texture_for_backgr
 export default function Services() {
   const services = [
     {
-      title: "Registered Massage Therapy",
-      description:
-        "A comprehensive assessment and treatment tailored to your specific needs. This may include a mix of deep tissue, Swedish, and myofascial techniques.",
-      benefits: ["Pain relief", "Improved circulation", "Stress reduction"],
-      duration: "60 Minutes",
-      price: "$75 - $160",
-    },
-    {
       title: "Deep Tissue Massage",
       description:
         "Focused therapeutic work targeting deeper layers of muscle and connective tissue. Ideal for chronic aches, postural tension, and long-standing restrictions that do not respond to lighter pressure.",
@@ -73,6 +65,7 @@ export default function Services() {
         "Deep muscular relaxation",
         "Boosts circulation and lymphatic flow",
         "Calms the nervous system",
+        "Improved circulation",
         "Reduces tension and stress",
         "Enhances overall rejuvenation and recovery",
       ],
@@ -89,6 +82,7 @@ export default function Services() {
         "Improves flexibility and ease of movement",
         "Restores healthy muscle function",
         "Decreases headaches and tension patterns",
+        "Pain relief",
       ],
       duration: "60 Minutes",
       price: "$75 - $130",
@@ -104,10 +98,10 @@ export default function Services() {
             Our Services
           </h1>
           <p className="text-xl font-light text-muted-foreground max-w-2xl mx-auto">
-            At Eywa Massage Therapy, we offer evidence-based, holistic massage therapy
-            designed to calm the nervous system, reduce pain, and support
-            long-term well-being. Each session is tailored to your unique needs
-            and goals.
+            At Eywa Massage Therapy, we offer evidence-based, holistic massage
+            therapy designed to calm the nervous system, reduce pain, and
+            support long-term well-being. Each session is tailored to your
+            unique needs and goals.
           </p>
         </div>
       </div>
@@ -144,15 +138,6 @@ export default function Services() {
                     ))}
                   </ul>
                 </div>
-              </div>
-
-              <div className="w-full md:w-64 flex-shrink-0 bg-[#F9F7F2] p-6 rounded-xl border border-primary/5 text-center">
-                <p className="text-sm text-muted-foreground mb-2">
-                  Sessions Available
-                </p>
-                <p className="font-serif font-medium text-primary">
-                  {service.duration}
-                </p>
               </div>
             </div>
           ))}

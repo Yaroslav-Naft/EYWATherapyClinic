@@ -54,7 +54,6 @@ Services Page
 List and describe each service clearly, focusing on benefits and expectations.
 Possible services:
 
-Registered Massage Therapy
 
 Deep Tissue Massage
 
@@ -63,8 +62,6 @@ Relaxation Massage
 Injury Recovery & Rehabilitation
 
 Sports & Performance Massage
-
-Pregnancy / Prenatal Massage
 
 Each service description should include:
 
