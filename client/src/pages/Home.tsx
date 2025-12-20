@@ -74,50 +74,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Intro / Mission */}
-      <section className="py-24 bg-background relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-full opacity-5 pointer-events-none">
-          <img
-            src={fernTexture}
-            className="w-full h-full object-cover mix-blend-multiply"
-          />
-        </div>
-
-        <div className="container mx-auto px-6 text-center max-w-3xl relative z-10">
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{once: true}}
-            variants={fadeIn}
-            className="space-y-6"
-          >
-            <span className="text-sm uppercase tracking-[0.2em] text-primary/60 font-semibold">
-              Welcome to Eywa Massage Therapy
-            </span>
-            <h2 className="text-3xl md:text-4xl font-serif text-primary">
-              Rooted in Healing. Focused on You.
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Eywa Massage Therapy was created to provide massage care that
-              blends clinical precision with a calm, attentive experience. Our
-              focus is on treatments that restore function, reduce tension, and
-              support lasting well-being.
-            </p>
-            <div className="pt-4">
-              <Link
-                href="/about"
-                className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors border-b border-primary/30 pb-1"
-              >
-                Read Our Story <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Review Section */}
       <ReviewSection />
-
 
       {/* Who We Help / Features */}
       <section className="py-24 bg-white">
@@ -165,6 +123,47 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Intro / Mission */}
+      <section className="py-24 bg-background relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/3 h-full opacity-5 pointer-events-none">
+          <img
+            src={fernTexture}
+            className="w-full h-full object-cover mix-blend-multiply"
+          />
+        </div>
+
+        <div className="container mx-auto px-6 text-center max-w-3xl relative z-10">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{once: true}}
+            variants={fadeIn}
+            className="space-y-6"
+          >
+            <span className="text-sm uppercase tracking-[0.2em] text-primary/60 font-semibold">
+              Welcome to Eywa Massage Therapy
+            </span>
+            <h2 className="text-3xl md:text-4xl font-serif text-primary">
+              Rooted in Healing. Focused on You.
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Eywa Massage Therapy was created to provide massage care that
+              blends clinical precision with a calm, attentive experience. Our
+              focus is on treatments that restore function, reduce tension, and
+              support lasting well-being.
+            </p>
+            <div className="pt-4">
+              <Link
+                href="/about"
+                className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors border-b border-primary/30 pb-1"
+              >
+                Read Our Story <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
