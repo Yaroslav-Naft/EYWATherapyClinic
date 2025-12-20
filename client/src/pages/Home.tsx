@@ -3,6 +3,7 @@ import {Button} from "@/components/ui/button";
 import {motion} from "framer-motion";
 import {ArrowRight, Leaf, Droplets, Activity, Heart} from "lucide-react";
 import {Link} from "wouter";
+import {ReviewSection} from "@/components/ReviewSection";
 
 // Assets
 import heroImage from "@assets/generated_images/calm_coastal_forest_landscape_for_hero_section.png";
@@ -113,6 +114,10 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* Review Section */}
+      <ReviewSection />
+
 
       {/* Who We Help / Features */}
       <section className="py-24 bg-white">
