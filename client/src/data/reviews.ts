@@ -54,7 +54,7 @@ export const REVIEWS: Review[] = [
     name: "Colette Kratzmann",
     initials: "CK",
     avatarColor: "#34495E",
-    timeAgo: "a year ago",
+    timeAgo: "Dec 9 2025",
     rating: 5,
     excerpt:
       "Max is amazing at what he does. He very quickly figured out spots where I was holding tension that I didn't realize. Best massage ever..",

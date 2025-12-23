@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import {motion} from "framer-motion";
 import waterTexture from "@assets/generated_images/abstract_calm_water_texture.png";
-import max from "@assets/generated_images/max.jpg";
+import max from "@assets/generated_images/max.jpeg";
 import olena from "@assets/generated_images/olena.jpg";
 
 export default function About() {
@@ -37,10 +37,10 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Practitioner Card 1 */}
             <div className="bg-[#F9F7F2] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="aspect-[4/3] bg-gradient-to-br from-primary/5 to-secondary/10 relative flex items-center justify-center">
+              <div className="aspect-[4/3] bg-gradient-to-br from-primary/5 to-secondary/10 relative flex items-center justify-center p-4">
                 <img
                   src={max}
-                  className="max-w-full max-h-full object-contain"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div className="p-8">
@@ -65,10 +65,10 @@ export default function About() {
 
             {/* Practitioner Card 2 */}
             <div className="bg-[#F9F7F2] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="aspect-[4/3] bg-gradient-to-br from-primary/5 to-secondary/10 relative flex items-center justify-center">
+              <div className="aspect-[4/3] bg-gradient-to-br from-primary/5 to-secondary/10 relative flex items-center justify-center p-4">
                 <img
                   src={olena}
-                  className="max-w-full max-h-full object-contain"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div className="p-8">
