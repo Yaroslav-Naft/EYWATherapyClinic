@@ -4,6 +4,7 @@ import {motion} from "framer-motion";
 import {ArrowRight, Leaf, Droplets, Activity, Heart} from "lucide-react";
 import {Link} from "wouter";
 import {ReviewSection} from "@/components/ReviewSection";
+import {services} from "@/data/services";
 
 // Assets
 import heroImage from "@assets/generated_images/calm_coastal_forest_landscape_for_hero_section.png";
@@ -191,32 +192,30 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {title: "Deep Tissue Massage", price: "From $120"},
-              {title: "Cranial Therapy", price: "From $110"},
-              {title: "Passive Stretch Therapy", price: "From $110"},
-            ].map((service, idx) => (
-              <div
-                key={idx}
-                className="group relative overflow-hidden rounded-xl aspect-[4/5] md:aspect-[3/4] bg-black/20 cursor-pointer"
-              >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90" />
-                <img
-                  src={idx === 1 ? fernTexture : heroImage}
-                  className="absolute inset-0 w-full h-full object-cover -z-10 transition-transform duration-700 group-hover:scale-110 opacity-80"
-                />
+            {services.slice(0, 3).map((service, idx) => {
+              const serviceId = service.title.toLowerCase().replace(/\s+/g, '-').replace(/[–—]/g, '-');
+              return (
+                <div
+                  key={idx}
+                  className="group relative overflow-hidden rounded-xl aspect-[4/5] md:aspect-[3/4] bg-black/20 cursor-pointer"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90" />
+                  <img
+                    src={idx === 1 ? fernTexture : heroImage}
+                    className="absolute inset-0 w-full h-full object-cover -z-10 transition-transform duration-700 group-hover:scale-110 opacity-80"
+                  />
 
-                <div className="absolute bottom-0 left-0 p-8 w-full">
-                  <h3 className="text-2xl font-serif font-medium text-white mb-2">
-                    {service.title}
-                  </h3>
-                  {/* <p className="text-white/70 font-light mb-4">{service.price}</p> */}
-                  <span className="inline-block text-sm text-secondary border-b border-secondary/50 pb-0.5 opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0 duration-300">
-                    Learn More
-                  </span>
+                  <div className="absolute bottom-0 left-0 p-8 w-full">
+                    <h3 className="text-2xl font-serif font-medium text-white mb-2">
+                      {service.title}
+                    </h3>
+                    <span className="inline-block text-sm text-secondary border-b border-secondary/50 pb-0.5 opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0 duration-300">
+                      <Link href={`/services#${serviceId}`}>Learn More</Link>
+                    </span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

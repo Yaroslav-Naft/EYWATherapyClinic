@@ -2,8 +2,22 @@ import Layout from "@/components/Layout";
 import {Button} from "@/components/ui/button";
 import {CheckCircle2} from "lucide-react";
 import {services} from "@/data/services";
+import {useEffect} from "react";
 
 export default function Services() {
+  useEffect(() => {
+    // Scroll to the service section if hash is present in URL
+    if (window.location.hash) {
+      const id = window.location.hash.substring(1);
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({behavior: 'smooth', block: 'center'});
+        }, 100);
+      }
+    }
+  }, []);
+
   return (
     <Layout>
       {/* Header */}
@@ -24,11 +38,14 @@ export default function Services() {
       {/* Services List */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6 max-w-5xl space-y-12">
-          {services.map((service, idx) => (
-            <div
-              key={idx}
-              className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-muted flex flex-col gap-8 items-center group hover:border-secondary/50 transition-colors"
-            >
+          {services.map((service, idx) => {
+            const serviceId = service.title.toLowerCase().replace(/\s+/g, '-').replace(/[–—]/g, '-');
+            return (
+              <div
+                key={idx}
+                id={serviceId}
+                className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-muted flex flex-col gap-8 items-center group hover:border-secondary/50 transition-colors"
+              >
               <div className="flex-1 text-center">
                 <h3 className="text-2xl font-serif font-bold text-primary mb-3">
                   {service.title}
@@ -55,7 +72,8 @@ export default function Services() {
                 </div>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
