@@ -28,7 +28,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen flex flex-col bg-background font-sans text-foreground">
       {/* Navigation */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#F9F7F2] ${
           scrolled ? "backdrop-blur-md shadow-sm py-4" : "py-6"
         }`}
       >
@@ -53,7 +53,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 {link.label}
               </Link>
             ))}
-            <Button asChild className="bg-primary hover:bg-primary/90 text-white font-sans tracking-wide rounded-full px-6">
+            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-sans tracking-wide rounded-full px-6">
               <a href="https://eywamassage.janeapp.com/" target="_blank" rel="noopener noreferrer">Book Online</a>
             </Button>
           </nav>
@@ -76,7 +76,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     {link.label}
                   </Link>
                 ))}
-                <Button asChild className="bg-primary hover:bg-primary/90 text-white font-sans tracking-wide rounded-full px-8 py-6 text-lg mt-4">
+                <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-sans tracking-wide rounded-full px-8 py-6 text-lg mt-4">
                   <a href="https://eywamassage.janeapp.com/" target="_blank" rel="noopener noreferrer">Book Online</a>
                 </Button>
               </SheetContent>
@@ -95,7 +95,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-serif font-bold text-white">Eywa Massage Therapy</h3>
+            <h3 className="text-2xl font-serif font-bold text-primary-foreground">Eywa Massage Therapy</h3>
             <p className="text-primary-foreground/80 leading-relaxed max-w-xs font-light">
                Holistic Healing for Modern Living
               <br />
@@ -105,7 +105,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
           {/* Contact */}
           <div className="space-y-4">
-            <h4 className="text-lg font-serif font-semibold text-white">Contact Us</h4>
+            <h4 className="text-lg font-serif font-semibold text-primary-foreground">Contact Us</h4>
             <div className="space-y-3 text-primary-foreground/80 font-light">
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 mt-0.5 shrink-0" />
@@ -125,7 +125,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
           {/* Links & Social */}
           <div className="space-y-4">
-            <h4 className="text-lg font-serif font-semibold text-white">Connect</h4>
+            <h4 className="text-lg font-serif font-semibold text-primary-foreground">Connect</h4>
             <div className="flex gap-4">
               <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors">
                 <Instagram className="h-5 w-5" />
@@ -135,7 +135,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </a>
             </div>
             <div className="pt-4">
-              <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white hover:text-primary rounded-full w-full md:w-auto bg-transparent">
+              <Button asChild variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground hover:text-primary rounded-full w-full md:w-auto bg-transparent">
                 <a href="https://eywamassage.janeapp.com/" target="_blank" rel="noopener noreferrer">
                   Book Appointment
                 </a>

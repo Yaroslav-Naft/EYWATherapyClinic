@@ -1,14 +1,90 @@
 import Layout from "@/components/Layout";
 import {Button} from "@/components/ui/button";
 import {motion} from "framer-motion";
-import {ArrowRight, Leaf, Droplets, Activity, Heart} from "lucide-react";
+import {ArrowRight, Leaf, Droplets, Activity, Heart, ChevronLeft, ChevronRight} from "lucide-react";
 import {Link} from "wouter";
 import {ReviewSection} from "@/components/ReviewSection";
 import {services} from "@/data/services";
+import useEmblaCarousel from "embla-carousel-react";
+import {useCallback} from "react";
 
 // Assets
 import heroImage from "@assets/generated_images/calm_coastal_forest_landscape_for_hero_section.png";
 import fernTexture from "@assets/generated_images/fern_leaves_texture_for_background_accent.png";
+
+function ServicesCarousel() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: true,
+    align: "start",
+    slidesToScroll: 1,
+  });
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  return (
+    <div className="relative">
+      {/* Navigation Buttons */}
+      <div className="absolute -top-16 right-0 flex gap-2 z-10">
+        <button
+          onClick={scrollPrev}
+          className="bg-[#F9F7F2]/10 hover:bg-[#F9F7F2]/20 text-[#F9F7F2] rounded-full p-3 transition-all backdrop-blur-sm border border-[#F9F7F2]/20"
+          aria-label="Previous slide"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+        <button
+          onClick={scrollNext}
+          className="bg-[#F9F7F2]/10 hover:bg-[#F9F7F2]/20 text-[#F9F7F2] rounded-full p-3 transition-all backdrop-blur-sm border border-[#F9F7F2]/20"
+          aria-label="Next slide"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
+      </div>
+
+      {/* Carousel */}
+      <div className="overflow-hidden -mx-3" ref={emblaRef}>
+        <div className="flex">
+          {services.map((service, idx) => {
+            const serviceId = service.title
+              .toLowerCase()
+              .replace(/\s+/g, "-")
+              .replace(/[–—]/g, "-");
+            return (
+              <div
+                key={idx}
+                className="flex-[0_0_100%] sm:flex-[0_0_50%] md:flex-[0_0_33.333%] min-w-0 px-3"
+              >
+                <div className="group relative overflow-hidden rounded-xl aspect-[4/5] md:aspect-[3/4] bg-black/20 cursor-pointer">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90" />
+                  <img
+                    src={idx % 2 === 1 ? fernTexture : heroImage}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80"
+                    alt={service.title}
+                  />
+
+                  <div className="absolute bottom-0 left-0 p-8 w-full">
+                    <h3 className="text-2xl font-serif font-medium text-[#F9F7F2] mb-2">
+                      {service.title}
+                    </h3>
+                    <span className="inline-block text-sm text-secondary border-b border-secondary/50 pb-0.5 opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0 duration-300">
+                      <Link href={`/services#${serviceId}`}>Learn More</Link>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Home() {
   const fadeIn = {
@@ -32,7 +108,7 @@ export default function Home() {
         </div>
 
         {/* Hero Content */}
-        <div className="container relative z-10 px-6 text-center text-white">
+        <div className="container relative z-10 px-6 text-center text-[#F9F7F2]">
           <motion.div
             initial={{opacity: 0, y: 30}}
             animate={{opacity: 1, y: 0}}
@@ -43,7 +119,7 @@ export default function Home() {
               Holistic Healing <br className="hidden md:block" />
               <span className="italic text-secondary">for Modern Living</span>
             </h1>
-            <p className="text-lg md:text-xl font-light max-w-2xl mx-auto text-white/90 drop-shadow-md">
+            <p className="text-lg md:text-xl font-light max-w-2xl mx-auto text-[#F9F7F2]/90 drop-shadow-md">
               Holistic Registered Massage Therapy rooted in the natural calm of
               the Campbell River coast.
             </p>
@@ -65,7 +141,7 @@ export default function Home() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-white text-white hover:bg-white/20 rounded-full px-8 py-6 text-lg backdrop-blur-sm transition-all bg-transparent"
+                  className="border-[#F9F7F2] text-[#F9F7F2] hover:bg-[#F9F7F2]/20 rounded-full px-8 py-6 text-lg backdrop-blur-sm transition-all bg-transparent"
                 >
                   Explore Services
                 </Button>
@@ -78,7 +154,36 @@ export default function Home() {
       {/* Review Section */}
       <ReviewSection />
 
-      {/* Who We Help / Features */}
+
+
+            {/* Services Preview */}
+      <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+            <div className="max-w-2xl">
+              <h2 className="text-3xl md:text-4xl font-serif mb-4 text-[#F9F7F2]">
+                Therapeutic Services
+              </h2>
+              <p className="text-[#F9F7F2]/80 font-light text-lg">
+                Whether you need deep tissue work or a moment of stillness, our
+                treatments are tailored to your body's needs.
+              </p>
+            </div>
+            <Link href="/services">
+              <Button
+                variant="outline"
+                className="border-[#F9F7F2]/30 text-[#F9F7F2] hover:bg-[#F9F7F2] hover:text-primary rounded-full px-6 bg-transparent"
+              >
+                View All Services
+              </Button>
+            </Link>
+          </div>
+
+          <ServicesCarousel />
+        </div>
+      </section>
+
+            {/* Who We Help / Features */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -128,7 +233,7 @@ export default function Home() {
       </section>
 
       {/* Intro / Mission */}
-      <section className="py-24 bg-background relative overflow-hidden">
+      {/* <section className="py-24 bg-background relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full opacity-5 pointer-events-none">
           <img
             src={fernTexture}
@@ -166,59 +271,9 @@ export default function Home() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Services Preview */}
-      <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-            <div className="max-w-2xl">
-              <h2 className="text-3xl md:text-4xl font-serif mb-4 text-white">
-                Therapeutic Services
-              </h2>
-              <p className="text-white/80 font-light text-lg">
-                Whether you need deep tissue work or a moment of stillness, our
-                treatments are tailored to your body's needs.
-              </p>
-            </div>
-            <Link href="/services">
-              <Button
-                variant="outline"
-                className="border-white/30 text-white hover:bg-white hover:text-primary rounded-full px-6 bg-transparent"
-              >
-                View All Services
-              </Button>
-            </Link>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {services.slice(0, 3).map((service, idx) => {
-              const serviceId = service.title.toLowerCase().replace(/\s+/g, '-').replace(/[–—]/g, '-');
-              return (
-                <div
-                  key={idx}
-                  className="group relative overflow-hidden rounded-xl aspect-[4/5] md:aspect-[3/4] bg-black/20 cursor-pointer"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90" />
-                  <img
-                    src={idx === 1 ? fernTexture : heroImage}
-                    className="absolute inset-0 w-full h-full object-cover -z-10 transition-transform duration-700 group-hover:scale-110 opacity-80"
-                  />
-
-                  <div className="absolute bottom-0 left-0 p-8 w-full">
-                    <h3 className="text-2xl font-serif font-medium text-white mb-2">
-                      {service.title}
-                    </h3>
-                    <span className="inline-block text-sm text-secondary border-b border-secondary/50 pb-0.5 opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0 duration-300">
-                      <Link href={`/services#${serviceId}`}>Learn More</Link>
-                    </span>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
       {/* Quote / CTA */}
       <section className="py-24 bg-[#F9F7F2] text-center">
@@ -234,7 +289,7 @@ export default function Home() {
           <Button
             asChild
             size="lg"
-            className="bg-primary text-white rounded-full px-10 py-6 text-lg shadow-lg hover:bg-primary/90"
+            className="bg-primary text-primary-foreground rounded-full px-10 py-6 text-lg shadow-lg hover:bg-primary/90"
           >
             <a
               href="https://eywamassage.janeapp.com/"

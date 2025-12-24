@@ -74,11 +74,11 @@ export default function Contact() {
                 Clinic Hours
               </h3>
               <div className="grid grid-cols-2 gap-4 text-sm text-muted-foreground">
-                <div>Monday - Friday</div>
+                <div>Tuesday - Saturday</div>
                 <div className="text-right">9:00 AM - 7:00 PM</div>
-                <div>Saturday</div>
-                <div className="text-right">10:00 AM - 4:00 PM</div>
                 <div>Sunday</div>
+                <div className="text-right">10:00 AM - 4:00 PM</div>
+                <div>Monday</div>
                 <div className="text-right">Closed</div>
               </div>
             </div>
