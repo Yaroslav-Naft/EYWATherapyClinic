@@ -8,11 +8,11 @@ export default function About() {
   return (
     <Layout>
       {/* Header */}
-      <div className="bg-primary text-primary-foreground py-20 relative overflow-hidden">
+      <div className="bg-primary text-primary-foreground zd pt-20 pb-10 my-8 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 mix-blend-overlay">
           <img src={storyimage} className="w-full h-full object-cover" />
         </div>
-        <div className="container mx-auto pt-10 mb-2 px-6 relative z-10 text-center">
+        <div className="container mx-auto mt-2 pt-10 mb-2 px-6 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl font-serif mb-6">
             Our Story & Philosophy
           </h1>

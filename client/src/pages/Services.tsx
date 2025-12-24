@@ -22,7 +22,7 @@ export default function Services() {
     <Layout>
       {/* Header */}
       <div className="bg-secondary/20 pt-20 pb-5">
-        <div className="container mx-auto px-6 pt-6 text-center">
+        <div className="container mx-auto mt-6 px-6 pt-6 text-center">
           <h1 className="text-4xl md:text-5xl font-serif text-primary mb-2">
             Our Services
           </h1>

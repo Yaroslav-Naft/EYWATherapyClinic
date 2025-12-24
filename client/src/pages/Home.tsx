@@ -1,65 +1,40 @@
 import Layout from "@/components/Layout";
 import {Button} from "@/components/ui/button";
 import {motion} from "framer-motion";
-import {ArrowRight, Leaf, Droplets, Activity, Heart, ChevronLeft, ChevronRight} from "lucide-react";
+import {ArrowRight, Leaf, Droplets, Activity, Heart} from "lucide-react";
 import {Link} from "wouter";
 import {ReviewSection} from "@/components/ReviewSection";
 import {services} from "@/data/services";
-import useEmblaCarousel from "embla-carousel-react";
-import {useCallback} from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 // Assets
 import heroImage from "@assets/generated_images/calm_coastal_forest_landscape_for_hero_section.png";
 import fernTexture from "@assets/generated_images/fern_leaves_texture_for_background_accent.png";
 
 function ServicesCarousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
-    align: "start",
-    slidesToScroll: 1,
-  });
-
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
-  }, [emblaApi]);
-
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
-  }, [emblaApi]);
-
   return (
-    <div className="relative">
-      {/* Navigation Buttons */}
-      <div className="absolute -top-16 right-0 flex gap-2 z-10">
-        <button
-          onClick={scrollPrev}
-          className="bg-[#F9F7F2]/10 hover:bg-[#F9F7F2]/20 text-[#F9F7F2] rounded-full p-3 transition-all backdrop-blur-sm border border-[#F9F7F2]/20"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft className="w-6 h-6" />
-        </button>
-        <button
-          onClick={scrollNext}
-          className="bg-[#F9F7F2]/10 hover:bg-[#F9F7F2]/20 text-[#F9F7F2] rounded-full p-3 transition-all backdrop-blur-sm border border-[#F9F7F2]/20"
-          aria-label="Next slide"
-        >
-          <ChevronRight className="w-6 h-6" />
-        </button>
-      </div>
-
-      {/* Carousel */}
-      <div className="overflow-hidden -mx-3" ref={emblaRef}>
-        <div className="flex">
+    <div className="relative px-12">
+      <Carousel
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        className="w-full"
+      >
+        <CarouselContent>
           {services.map((service, idx) => {
             const serviceId = service.title
               .toLowerCase()
               .replace(/\s+/g, "-")
               .replace(/[–—]/g, "-");
             return (
-              <div
-                key={idx}
-                className="flex-[0_0_100%] sm:flex-[0_0_50%] md:flex-[0_0_33.333%] min-w-0 px-3"
-              >
+              <CarouselItem key={idx} className="md:basis-1/2 lg:basis-1/3">
                 <div className="group relative overflow-hidden rounded-xl aspect-[4/5] md:aspect-[3/4] bg-black/20 cursor-pointer">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90" />
                   <img
@@ -77,11 +52,13 @@ function ServicesCarousel() {
                     </span>
                   </div>
                 </div>
-              </div>
+              </CarouselItem>
             );
           })}
-        </div>
-      </div>
+        </CarouselContent>
+        <CarouselPrevious className="hidden md:flex" />
+        <CarouselNext className="hidden md:flex" />
+      </Carousel>
     </div>
   );
 }
