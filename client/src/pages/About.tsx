@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import {motion} from "framer-motion";
-import clinicimage from "@assets/generated_images/clinicImage.png";
+import storyimage from "@assets/generated_images/storyimage.jpeg";
 import max from "@assets/generated_images/max.jpeg";
 import olena from "@assets/generated_images/olena.jpg";
 
@@ -10,7 +10,7 @@ export default function About() {
       {/* Header */}
       <div className="bg-primary text-primary-foreground py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 mix-blend-overlay">
-          <img src={clinicimage} className="w-full h-full object-cover" />
+          <img src={storyimage} className="w-full h-full object-cover" />
         </div>
         <div className="container mx-auto pt-10 mb-2 px-6 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl font-serif mb-6">
@@ -134,7 +134,7 @@ export default function About() {
             >
               {/* Placeholder for practitioner or clinic interior */}
               <img
-                src={clinicimage}
+                src={storyimage}
                 alt="Calming clinic atmosphere"
                 className="w-full h-full object-cover grayscale-[20%] contrast-[0.9]"
               />
