@@ -33,8 +33,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         }`}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 cursor-pointer group">
-            <img src={logo} alt="Eywa Massage Therapy Logo" className="h-10 md:h-12 w-auto transition-transform group-hover:scale-105" />
+          <Link href="/" className="flex items-center gap-6 cursor-pointer group">
+            <img src={logo} alt="Eywa Massage Therapy Logo" className="h-16 md:h-18 w-auto transition-transform group-hover:scale-105" />
             <span className="text-2xl md:text-3xl font-serif font-bold text-primary tracking-wide">
               Eywa Massage Therapy
             </span>
