@@ -8,7 +8,7 @@ export default function About() {
   return (
     <Layout>
       {/* Header */}
-      <div className="bg-primary text-primary-foreground zd pt-20 pb-10 my-8 relative overflow-hidden">
+      <div className="bg-primary text-primary-foreground zd pt-20 pb-10 mb-8 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 mix-blend-overlay">
           <img src={storyimage} className="w-full h-full object-cover" />
         </div>

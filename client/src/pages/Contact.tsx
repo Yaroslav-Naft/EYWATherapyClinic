@@ -6,6 +6,21 @@ import driftwoodTexture from "@assets/generated_images/driftwood_and_sand_textur
 export default function Contact() {
   return (
     <Layout>
+      {/* Header */}
+      <div className="bg-primary text-primary-foreground pt-20 pb-10 mb-8 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 mix-blend-overlay">
+          <img src={driftwoodTexture} className="w-full h-full object-cover" />
+        </div>
+        <div className="container mx-auto mt-2 pt-10 mb-2 px-6 relative z-10 text-center">
+          <h1 className="text-4xl md:text-5xl font-serif mb-6">
+            Contact
+          </h1>
+          <p className="text-xl font-light text-white/80 max-w-2xl mx-auto">
+            We're here to help you on your wellness journey.
+          </p>
+        </div>
+      </div>
+
       <div className="flex flex-col md:flex-row min-h-screen">
         {/* Info Section */}
         <div className="w-full md:w-1/2 bg-background p-10 md:p-20 flex flex-col justify-center">
