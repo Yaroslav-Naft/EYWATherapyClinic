@@ -101,28 +101,32 @@ export default function Home() {
               the Campbell River coast.
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center pt-8">
-              <Button
-                asChild
-                size="lg"
-                className="bg-[#F9F7F2] text-primary hover:bg-white rounded-full px-8 py-6 text-lg shadow-xl transition-all hover:scale-105"
-              >
-                <a
-                  href="https://eywamassage.janeapp.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+              <div>
+                <Button
+                  asChild
+                  size="lg"
+                  className="border-[#F9F7F2] text-[#F9F7F2] hover:bg-[#F9F7F2]/20 rounded-full px-14 py-6 text-lg backdrop-blur-sm transition-all bg-transparent"
                 >
-                  Book an Appointment
-                </a>
-              </Button>
-              <Link href="/services">
+                  <a
+                    href="https://eywamassage.janeapp.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Book Appointment
+                  </a>
+                </Button>
+              </div>
+              <div>
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-[#F9F7F2] text-[#F9F7F2] hover:bg-[#F9F7F2]/20 rounded-full px-8 py-6 text-lg backdrop-blur-sm transition-all bg-transparent"
+                  className="border-[#F9F7F2] text-[#F9F7F2] hover:bg-[#F9F7F2]/20 rounded-full px-14 py-6 text-lg backdrop-blur-sm transition-all bg-transparent"
                 >
-                  Explore Services
+                  <a href="/services" target="_blank" rel="noopener noreferrer">
+                    Explore Services
+                  </a>
                 </Button>
-              </Link>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -131,9 +135,7 @@ export default function Home() {
       {/* Review Section */}
       <ReviewSection />
 
-
-
-            {/* Services Preview */}
+      {/* Services Preview */}
       <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
@@ -160,7 +162,7 @@ export default function Home() {
         </div>
       </section>
 
-            {/* Who We Help / Features */}
+      {/* Who We Help / Features */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -249,8 +251,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section> */}
-
-
 
       {/* Quote / CTA */}
       <section className="py-24 bg-[#F9F7F2] text-center">

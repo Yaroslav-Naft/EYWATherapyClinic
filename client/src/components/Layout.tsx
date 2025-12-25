@@ -28,14 +28,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen flex flex-col bg-background font-sans text-foreground">
       {/* Navigation */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#F9F7F2] ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300  ${
           scrolled ? "backdrop-blur-md shadow-sm py-4" : "py-6"
         }`}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-6 cursor-pointer group">
             <img src={logo} alt="Eywa Massage Therapy Logo" className="h-16 md:h-18 w-auto transition-transform group-hover:scale-105" />
-            <span className="text-2xl md:text-3xl font-serif font-bold text-primary tracking-wide">
+            <span className="text-2xl md:text-3xl font-serif font-bold text-secondary tracking-wide">
               Eywa Massage Therapy
             </span>
           </Link>
@@ -46,9 +46,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <Link 
                 key={link.href} 
                 href={link.href}
-                className={`text-sm uppercase tracking-widest hover:text-primary transition-colors ${
-                  location === link.href ? "text-primary font-semibold" : "text-muted-foreground"
-                }`}
+                className={`text-sm uppercase tracking-widest hover:text-primary transition-colors text-secondary font-semibold
+                `}
               >
                 {link.label}
               </Link>
