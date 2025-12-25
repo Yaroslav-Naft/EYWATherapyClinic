@@ -3,6 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Star, CheckCircle2 } from "lucide-react";
 import { GoogleLogo } from "./GoogleLogo";
 import type { Review } from "@/data/reviews";
+import { REVIEW_STATS } from "@/data/reviews";
 
 interface ReviewCardProps {
   review: Review;
@@ -49,9 +50,14 @@ export function ReviewCard({ review }: ReviewCardProps) {
         <p className="text-sm text-muted-foreground leading-relaxed mb-3">
           {review.excerpt}
         </p>
-        <button className="text-sm text-muted-foreground hover:text-primary transition-colors">
+        <a
+          href={REVIEW_STATS.reviewUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+        >
           Read more
-        </button>
+        </a>
         <div className="flex items-center gap-2 mt-4 pt-4 border-t">
           <GoogleLogo />
           <span className="text-xs text-muted-foreground">

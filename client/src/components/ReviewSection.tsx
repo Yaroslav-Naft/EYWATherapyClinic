@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import { ReviewCard } from "./ReviewCard";
 import { REVIEWS, REVIEW_STATS } from "@/data/reviews";
+import Autoplay from "embla-carousel-autoplay";
 
 export function ReviewSection() {
   return (
@@ -93,6 +94,11 @@ export function ReviewSection() {
               align: "start",
               loop: true,
             }}
+            plugins={[
+              Autoplay({
+                delay: 2000,
+              }),
+            ]}
             className="w-full"
           >
             <CarouselContent>

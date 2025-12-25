@@ -12,6 +12,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 // Assets
 import heroImage from "@assets/generated_images/calm_coastal_forest_landscape_for_hero_section.png";
@@ -25,6 +26,11 @@ function ServicesCarousel() {
           align: "start",
           loop: true,
         }}
+        plugins={[
+          Autoplay({
+            delay: 2500,
+          }),
+        ]}
         className="w-full"
       >
         <CarouselContent>
