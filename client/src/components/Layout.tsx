@@ -133,7 +133,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <Facebook className="h-5 w-5" />
               </a>
             </div>
-            <div className="pt-4">
+            <div className="pt-4 hidden md:block">
               <Button asChild variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground hover:text-primary rounded-full w-full md:w-auto bg-transparent">
                 <a href="https://eywamassage.janeapp.com/" target="_blank" rel="noopener noreferrer">
                   Book Appointment
