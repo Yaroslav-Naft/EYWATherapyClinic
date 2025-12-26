@@ -29,7 +29,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* Navigation */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? "backdrop-blur-md shadow-sm py-4" : "py-6"
+          scrolled ? "bg-[#2D4E3C] shadow-sm py-4" : "py-6"
         }`}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
