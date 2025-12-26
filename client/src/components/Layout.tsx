@@ -61,8 +61,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-primary">
-                  <Menu className="h-6 w-6" />
+                <Button variant="ghost" size="icon" className="text-[#8dcfc7] hover:text-[#8dcfc7]/80">
+                  <Menu className="h-8 w-8" />
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="bg-[#F9F7F2] border-none flex flex-col justify-center items-center gap-8">

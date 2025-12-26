@@ -113,5 +113,5 @@ export const REVIEW_STATS = {
   averageRating: 4.9,
   totalReviews: 20,
   platform: "google" as const,
-  reviewUrl: "https://maps.app.goo.gl/kJEeL3Cevt7qB9qb9",
+  reviewUrl: "https://share.google/sqTXkm1A77EUgFdOo",
 };

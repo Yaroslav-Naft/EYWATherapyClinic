@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import {Button} from "@/components/ui/button";
-import {CheckCircle2} from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
+import storyimage from "@assets/generated_images/storyimage.jpeg";
 import {services} from "@/data/services";
 import {useEffect} from "react";
 
@@ -21,12 +22,15 @@ export default function Services() {
   return (
     <Layout>
       {/* Header */}
-      <div className="bg-secondary/20 pt-20 pb-10">
-        <div className="container mx-auto mt-6 px-6 pt-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-serif text-primary mb-2">
+      <div className="bg-primary text-primary-foreground zd pt-20 pb-10 mb-8 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 mix-blend-overlay">
+          <img src={storyimage} className="w-full h-full object-cover" />
+        </div>
+        <div className="container mx-auto mt-2 pt-10 mb-2 px-6 relative z-10 text-center">
+          <h1 className="text-4xl md:text-5xl font-serif mb-6">
             Our Services
           </h1>
-          <p className="text-xl font-light text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl font-light text-white/80 max-w-2xl mx-auto">
             At Eywa Massage Therapy, we offer evidence-based, holistic massage
             therapy designed to calm the nervous system, reduce pain, and
             support long-term well-being. Each session is tailored to your
@@ -34,6 +38,8 @@ export default function Services() {
           </p>
         </div>
       </div>
+
+
 
       {/* Services List */}
       <section className="py-20 bg-background">
@@ -44,7 +50,7 @@ export default function Services() {
               <div
                 key={idx}
                 id={serviceId}
-                className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-muted flex flex-col gap-8 items-center group hover:border-secondary/50 transition-colors"
+                className="to-secondary/10 p-8 md:p-10 rounded-2xl shadow-sm border border-muted flex flex-col gap-8 items-center group hover:border-secondary/50 transition-colors"
               >
               <div className="flex-1 text-center">
                 <h3 className="text-2xl font-serif font-bold text-primary mb-3">

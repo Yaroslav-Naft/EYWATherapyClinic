@@ -23,7 +23,7 @@ export default function About() {
       </div>
 
       {/* Practitioner Section */}
-      <section className="pt-10 pb-20 bg-white">
+      <section className="pt-10 pb-20 bg-[#f7f5f3]">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-serif text-primary mb-4">
@@ -36,7 +36,7 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Practitioner Card 1 */}
-            <div className="bg-[#F9F7F2] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="aspect-[4/3] bg-gradient-to-br from-primary/5 to-secondary/10 relative flex items-center justify-center p-4">
                 <img
                   src={max}
@@ -64,7 +64,7 @@ export default function About() {
             </div>
 
             {/* Practitioner Card 2 */}
-            <div className="bg-[#F9F7F2] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="aspect-[4/3] bg-gradient-to-br from-primary/5 to-secondary/10 relative flex items-center justify-center p-4">
                 <img
                   src={olena}
@@ -95,7 +95,7 @@ export default function About() {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-background">
+      <section className="md: py-20 py-0 bg-background">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
