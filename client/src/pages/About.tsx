@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import {motion} from "framer-motion";
 import storyimage from "@assets/generated_images/storyimage.jpeg";
 import max from "@assets/generated_images/max.jpeg";
-import olena from "@assets/generated_images/olena.jpg";
+import olena from "@assets/generated_images/olena.png";
 
 export default function About() {
   return (

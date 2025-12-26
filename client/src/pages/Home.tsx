@@ -100,7 +100,7 @@ export default function Home() {
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium tracking-tight leading-tight drop-shadow-lg">
               Holistic Healing <br className="hidden md:block" />
-              <span className="italic text-secondary">for Modern Living</span>
+              <span className="italic">for Modern Living</span>
             </h1>
             <p className="text-lg md:text-xl font-light max-w-2xl mx-auto text-[#F9F7F2]/90 drop-shadow-md">
               Holistic Registered Massage Therapy rooted in the natural calm of
