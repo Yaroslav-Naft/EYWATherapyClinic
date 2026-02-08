@@ -60,16 +60,16 @@ export default function Contact() {
               </div>
 
               {/* Todo: re-add phone once provided */}
-              {/* <div className="flex items-start gap-4">
+              <div className="flex items-start gap-4">
                 <div className="bg-secondary/20 p-3 rounded-full text-primary">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
                   <h3 className="font-serif font-bold text-primary text-lg">Call Us</h3>
-                  <p className="text-muted-foreground">(250) 555-0123</p>
+                  <p className="text-muted-foreground">(250) 850-0620</p>
                   <p className="text-xs text-muted-foreground mt-1">Mon-Fri, 9am - 5pm</p>
                 </div>
-              </div> */}
+              </div>
 
               <div className="flex items-start gap-4">
                 <div className="bg-secondary/20 p-3 rounded-full text-primary">

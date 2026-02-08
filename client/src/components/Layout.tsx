@@ -111,10 +111,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <p>Unit 2 – 522 South Dogwood Street<br />Campbell River, BC V9W 6Y7</p>
               </div>
               {/* TODO: update phone when received */}
-              {/* <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 shrink-0" />
-                <p>(250) 555-0123</p>
-              </div> */}
+                <p>(250) 850-0620</p>
+              </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 shrink-0" />
                 <p>eywatherapy@gmail.com</p>
